@@ -1,0 +1,224 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="MasterPage1.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+	<link href="Stylesheet1.css" rel="stylesheet" />
+     <style type="text/css">
+        * {
+            margin: 0;
+            padding:0 ;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        body {
+            background: #f0f0f0;
+        }
+
+        ul {
+            list-style-type: none;
+            font-size: 20px;
+        }
+
+        .ti-ti-folder {
+            color: #2b6ef3;
+            font-weight: 900;
+            font-size: 17px;
+            margin-left:0px;
+            padding:0px;
+            
+        }
+
+        .ti-ti-file {
+            color: #777676;
+            font-weight: 900;
+            font-size: 16px;
+        }
+
+        .rightAngle::before {
+            content: '\25B6';
+            display:inline-flex;
+            font-size: 10px;
+            color: #777676;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 2px;
+            
+            
+        }
+
+        .nested {
+            padding-left:20px;
+            display: none;
+            
+        }
+
+        .nested.active {
+            display: block;
+        }
+
+        .rightAngle-Down::before {
+            transform: rotate(90deg);
+            transition: 0.2s ease-out;
+        }
+
+        /* Hover effect */
+        .rightAngle:hover::before,
+        .rightAngle-Down:hover::before {
+            color: #2b6ef3;
+        }
+
+        /* Style for sub-child bullets */
+        .nested ul {
+            list-style-type: disc; /* Change bullet style */
+            padding-left: 30px; /* Adjust indentation */
+        }
+        
+    
+/* Scrollbar style */
+.content {
+    overflow: hidden; /* Hide scrollbar by default 
+    overflow-y:scroll;*/
+        height: calc(100vh - 100px); /* Set max height to viewport height 
+    height: 100vh;*/
+        scrollbar-width:thin;
+    padding-right: 20px; /* Add space for scrollbar to prevent content from shifting */
+}
+
+/* Show scrollbar on hover */
+.content:hover {
+    overflow-y: auto;
+    overflow-x: hidden; /* Hide horizontal scrollbar on hover */
+}
+
+/* Track style */
+.content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle style */
+.content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 20px;
+    border: 2px solid #f1f1f1;
+}
+
+/* Handle on hover */
+.content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+#footer {
+    margin-right: -20px; /* Counteract the padding-bottom on .content */
+}
+
+    #logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+ 
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+		<div class="row">
+				
+			<div class="col-2" id="logo">
+				<a class="navbar-brand" href="#"><img src="Content/logo.png" width="140"></a>
+			</div>
+			<div class="col-10" id="header">
+				<h2><b>HinMaT</b> : Hindi Marathi Machine Translation Framework</h2>
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12" id="menu">
+				<ul>
+					<li><a href="">Home |</a></li>
+					<li><a href="">About us |</a></li>
+					<li><a href="">Gallery |</a></li>
+					<li><a href="">Products |</a></li>
+					<li><a href="">Contact us |</a></li>
+				
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-2" id="sidebar" >
+				  <ul>
+        <li>
+            <span class="rightAngle"></span>
+            <span class="ti-ti-folder"></span>Home
+            <ul class="nested">
+                <li><span class="rightAngle"></span><span class="ti-ti-folder"></span>&nbsp;&nbsp;Master Data
+                    <ul class="nested">
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;Grammer Ontology Master</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;Phrasal lexicon master</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL Root Verb Master</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL Root Verb Master</li>
+                    </ul>
+                </li>
+                <li><span class="rightAngle"></span><span class="ti-ti-folder"></span>&nbsp;&nbsp;Lexicon Manager
+                    <ul class="nested">
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL Word Lexicon Manager</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;TL Word Lexicon Manager</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;Abbreviation Lexicon Manager</li>
+                    </ul>
+                </li>
+                <li><span class="rightAngle"></span><span class="ti-ti-folder"></span>&nbsp;&nbsp;Morphology Rule Manager
+                    <ul class="nested">
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL Word Morphology Manager</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;TL Word Morphology Manager</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL Verb Morphology Rule Manager</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;TL Verb Morphology Rule Manager</li>
+                    </ul>
+                </li>
+                <li><span class="rightAngle"></span><span class="ti-ti-folder"></span>&nbsp;&nbsp;Morphology Generator
+                    <ul class="nested">
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL/TL Word Morphology Generator</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL/TL Word Morphology Generator</li>
+                    </ul>
+                </li>
+                <li><span class="rightAngle"></span><span class="ti-ti-folder"></span>&nbsp;&nbsp;Morphology Generator</li>
+            </ul>
+        </li>
+    </ul>
+			</div>
+			<div class="col-10" id="content">
+				 
+         
+			
+        <div id="contentWrapper">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+            </asp:ContentPlaceHolder>
+        </div></div>
+			<div class="row" id="footer">
+			<div class="col-12">
+				&copy; 2024 by North Maharashtra University,Jalgaon
+			</div>
+                </div>
+		</div>
+            </div>
+    </form>
+    <script type="text/javascript">
+    var toggleNode = document.querySelectorAll('.rightAngle');
+    toggleNode.forEach(function(node) {
+        node.addEventListener('click', function() {
+            var nestedList = this.parentElement.querySelector('.nested');
+            nestedList.classList.toggle('active');
+            this.classList.toggle('rightAngle-Down');
+        });
+    });
+    </script>
+
+</body>
+</html>

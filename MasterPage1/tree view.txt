@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tree view</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        body {
+            background: #f0f0f0;
+        }
+
+        ul {
+            list-style-type: none;
+            font-size: 20px;
+        }
+
+        .ti-ti-folder {
+            color: #2b6ef3;
+            font-weight: 900;
+            font-size: 17px;
+        }
+
+        .ti-ti-file {
+            color: #777676;
+            font-weight: 900;
+            font-size: 16px;
+        }
+
+        .rightAngle::before {
+            content: '\25B6';
+            display: inline-block;
+            font-size: 10px;
+            color: #777676;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .nested {
+            padding-left: 55px;
+            display: none;
+        }
+
+        .nested.active {
+            display: block;
+        }
+
+        .rightAngle-Down::before {
+            transform: rotate(90deg);
+            transition: 0.2s ease-out;
+        }
+
+        /* Hover effect */
+        .rightAngle:hover::before,
+        .rightAngle-Down:hover::before {
+            color: #2b6ef3;
+        }
+
+        /* Style for sub-child bullets */
+        .nested ul {
+            list-style-type: disc; /* Change bullet style */
+            padding-left: 30px; /* Adjust indentation */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <span class="rightAngle"></span>
+            <span class="ti-ti-folder"></span>&nbsp;&nbsp;Home
+            <ul class="nested">
+                <li><span class="rightAngle"></span><span class="ti-ti-folder"></span>&nbsp;&nbsp;Master Data
+                    <ul class="nested">
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;Grammer Ontology Master</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;Phrasal lexicon master</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL Root Verb Master</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL Root Verb Master</li>
+                    </ul>
+                </li>
+                <li><span class="rightAngle"></span><span class="ti-ti-folder"></span>&nbsp;&nbsp;Lexicon Manager
+                    <ul class="nested">
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL Word Lexicon Manager</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;TL Word Lexicon Manager</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;Abbreviation Lexicon Manager</li>
+                    </ul>
+                </li>
+                <li><span class="rightAngle"></span><span class="ti-ti-folder"></span>&nbsp;&nbsp;Morphology Rule Manager
+                    <ul class="nested">
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL Word Morphology Manager</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;TL Word Morphology Manager</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL Verb Morphology Rule Manager</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;TL Verb Morphology Rule Manager</li>
+                    </ul>
+                </li>
+                <li><span class="rightAngle"></span><span class="ti-ti-folder"></span>&nbsp;&nbsp;Morphology Generator
+                    <ul class="nested">
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL/TL Word Morphology Generator</li>
+                        <li><span class="ti-ti-file"></span>&nbsp;&nbsp;SL/TL Word Morphology Generator</li>
+                    </ul>
+                </li>
+                <li><span class="rightAngle"></span><span class="ti-ti-folder"></span>&nbsp;&nbsp;Morphology Generator</li>
+            </ul>
+        </li>
+    </ul>
+<script type="text/javascript">
+    var toggleNode = document.querySelectorAll('.rightAngle');
+    toggleNode.forEach(function(node) {
+        node.addEventListener('click', function() {
+            var nestedList = this.parentElement.querySelector('.nested');
+            nestedList.classList.toggle('active');
+            this.classList.toggle('rightAngle-Down');
+        });
+    });
+</script>
+</body>
+</html>

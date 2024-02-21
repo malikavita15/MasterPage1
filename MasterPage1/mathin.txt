@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HinMaT</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+				
+			<div class="col-2" id="logo">
+				<a class="navbar-brand" href="#"><img src="logo.png" width="140px"></a>
+			</div>
+			<div class="col-10" id="header">
+				<h2><b>HinMaT</b> : Hindi Marathi Machine Translation Framework</h2>
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12" id="menu">
+				<ul><b>
+					<li><a href="">Home |</a></li>
+					<li><a href="">About us |</a></li>
+					<li><a href="">Gallery |</a></li>
+					<li><a href="">Products |</a></li>
+					<li><a href="">Contact us |</a></li>
+				</b>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-2" id="sidebar">
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">About us</a></li>
+					<li><a href="">Gallery</a></li>
+					<li><a href="">Products</a></li>
+					<li><a href="">Contact us</a></li>
+				</ul>
+			</div>
+			<div class="col-10" id="content">
+				
+				<h2> sub heading</h2>
+				<p>Web hosting is a process and service through which web application or website files are stored in a Web server to publish to the Internet via World Wide Web. These files are primarily hosted to be publicly available around the world at any time.Web hosting is a process and service through which web application or website files are stored in a Web server to publish to the Internet via World Wide Web. These files are primarily hosted to be publicly available around the world at any time.Web hosting is a process and service through which web application or website files are stored in a Web server to publish to the Internet via World Wide Web. These files are primarily hosted to be Web hosting is a process and service through which web application or website files are stored in a Web server to publish to the Internet via World Wide Web. These files are primarily hosted to be publicly available around the world at any time.Web hosting is a process and service through which web application or website files are stored in a Web server to publish to the Internet via World Wide Web. These files are primarily hosted to be publicly available around the world at any time.Web hosting is a process and service through which web application or website files are stored in a Web server to publish to the Internet via World Wide Web. These files are primarily hosted to be publicly available around the world at any time.</p>
+			</div>
+			
+			
+		</div>
+		<div class="row" id="footer">
+			<div class="col-12">
+				@copyright 2024 by North Maharashtra University,Jalgaon
+			</div>
+		</div>
+	</div>
+</body>
+</html>

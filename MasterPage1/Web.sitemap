@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+	<siteMapNode url="~/Default.aspx" title="Home"  description="Home Page">
+		<siteMapNode url="" title="Master Data" description="">
+			<siteMapNode url="~/GrammerOntologyMaster.aspx" title="Grammer Ontology Master" />
+			<siteMapNode url="~/PhrasalLexiconMaster.aspx" title="Phrasal Lexicon Master" />
+			<siteMapNode url="~/SLRootVerbMaster.aspx" title="SL Root Verb Master" />
+		</siteMapNode>
+		<siteMapNode url="" title="Lexicon Manager" description="">
+			<siteMapNode url="~/SLWordLexiconManager.aspx" title="SL Word Lexicon Manager" />
+			<siteMapNode url="~/TLWordLexiconManager.aspx" title="TL Word Lexicon Manager" />
+			<siteMapNode url="~/AbbreviationLexiconManager.aspx" title="Abbreviation Lexicon Manager" />
+		</siteMapNode>
+		<siteMapNode url="" title="Morphology Rule Manager" description="">
+			<siteMapNode url="~/SLWordMorphologyManager.aspx" title="SL Word Morphology Manager" />
+			<siteMapNode url="~/TLWordMorphologyManager.aspx" title="TL Word Morphology Manager" />
+			<siteMapNode url="~/SLVerbMorphologyRuleManager.aspx" title="SL Verb Morphology Rule Manager" />
+			<siteMapNode url="~/TLVerbMorphologyRuleManager.aspx" title="TL Verb Morphology Rule Manager" />
+		</siteMapNode>
+		<siteMapNode url="" title="Morphology Generator" description="">
+			<siteMapNode url="~/SLTLWordMorphologyGenerator.aspx" title="SL/TL Word Morphology Generator" />
+			<siteMapNode url="~/SLTLVerbMorphologyGenerator.aspx" title="SL/TL Word Morphology Generator" />
+		</siteMapNode>
+	</siteMapNode>
+</siteMap>
